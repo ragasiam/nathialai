@@ -1,0 +1,195 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ரகசியம் வானொலி</title>
+        <meta name="description" content="Radio station HTML template">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <!-- icons -->
+        <link href='fonts/dripicons/webfont.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/qticons/qticons.css' rel='stylesheet' type='text/css'>
+        
+        <!-- slick slider -->
+        <link href='components/slick/slick.css' rel='stylesheet' type='text/css'>
+        
+        <!-- swipebox -->
+        <link href='components/swipebox/src/css/swipebox.min.css' rel='stylesheet' type='text/css'>
+        
+        <!-- countdown component -->
+        <link rel="stylesheet" type="text/css" href="components/countdown/css/jquery.classycountdown.css" />
+
+        <!-- QT 360 PLAYER component -->
+        <link rel="stylesheet" type="text/css" href="components/soundmanager/templates/qtradio-player/css/flashblock.css" />
+        <link rel="stylesheet" type="text/css" href="components/soundmanager/templates/qtradio-player/css/qt-360player-volume.css" />
+
+        
+        <!-- Main css file -->
+        <link rel="stylesheet" href="css/qt-main.css"><!-- INCLUDES THE CHOSEN FRAMEWORK VIA #IMPORT AND SASS -->
+        
+        <!-- Custom typography settings and google fonts -->
+        <link rel="stylesheet" href="css/qt-typography.css">
+		
+		<style>
+  * {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+@keyframes slide {
+  from { left:100%; transform: translate(0, 0); }
+  to { left: -100%; transform: translate(-100%, 0); }
+}
+@-webkit-keyframes slide {
+  from { left:100%; transform: translate(0, 0); }
+  to { left: -100%; transform: translate(-100%, 0); }
+}
+
+ .marquee {
+  color:#ffffff; 
+  background-color: #;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+   
+.marquee span {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  left: 100%;
+  animation: marquee 20s linear infinite;
+}
+.marquee:hover span {
+  animation-play-state: paused;
+}
+
+.marquee span:nth-child(1) {
+  animation-delay: 0s;
+}
+.marquee span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.marquee span:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.marquee span:nth-child(4) {
+  animation-delay: 2.4s;
+}
+.marquee span:nth-child(5) {
+  animation-delay: 3.8s;
+}
+
+@keyframes marquee {
+  0%   { left: 100%; }
+  100% { left: -100%; }
+}
+</style>
+
+    </head>
+    <body>
+    <!-- QT HEADER END ================================ -->
+    <div class="qt-parentcontainer">
+		        
+		<!-- PLAYER ========================= -->
+		<div id="qtplayercontainer" data-playervolume="true" data-accentcolor="#dd0e34" data-accentcolordark="#ff0442" data-textcolor="#ffffff" data-soundmanagerurl="./components/soundmanager/swf/" class="qt-playercontainer qt-playervolume qt-clearfix qt-content-primary">
+			<div class="qt-playercontainer-content qt-vertical-padding-m">
+				<div class="qt-playercontainer-header">
+					<h2 id="qtradiotitle" class="qt-text-shadow">ரகசியம் வானொலி</h2> <br />
+					<h4 id="qtradiosubtitle" class="qt-thin qt-text-shadow small">24/7 இடைவிடாத இசை மழை</h4>
+				</div>
+				<div class="qt-playercontainer-musicplayer" id="qtmusicplayer">
+					<div class="qt-musicplayer">
+						<div class="ui360 ui360-vis qt-ui360">
+							<a id="playerlink" href="http://109.74.196.48:8251/stream"></a>
+						</div>
+					</div>
+				</div>
+				<div class="qt-playercontainer-data qt-container qt-text-shadow small">
+					<h6 class="qt-inline-textdeco">
+						<span>கேட்டுக்கொண்டிருக்கும் பாடல்</span>
+					</h6>
+					<div class="qt-t qt-current-track"> <p class="marquee">
+					<span class="cc_streaminfo" data-type="song" data-username="ragasiamfm">Loading ...</span> 
+					<span>   </span>
+					<span> இசை மழையில் நனைந்திட இணைந்திருங்கள்...  </span>
+					<span class="cc_streaminfo" data-type="song" data-username="ragasiamfm">Loading ...</span>
+					</p>
+					</div>
+					<hr class="qt-inline-textdeco">
+				</div>
+			</div>
+			<div id="playerimage" class="qt-header-bg" data-bgimage="imagestemplate/full-1600-700.jpg">
+				<img src="imagestemplate/full-1600-700.jpg" alt="Featured image" width="690" height="302">
+			</div>
+		</div>
+		<!-- this is for xml radio feed -->
+		<div id="qtShoutcastFeedData" class="hidden" data-style="" data-channel="1" data-host="109.74.196.48" data-port="8251"></div>
+		<!-- PLAYER END ========================= -->
+		<!-- CHANNELS LIST ========================= -->
+		<div class="qt-part-channels-list">
+			<ul class="qt-content-aside qt-channelslist qt-negative qt-content-primary">
+				<li class="qt-channel">
+					<a href="#!" class="qt-ellipsis" data-title="06AM Ibiza" data-subtitle="Underground Radio" data-background="imagestemplate/photo-squared-500-500.jpg" data-logo="imagestemplate/radio-logo.png" data-playtrack="http://109.74.196.48:8251/play" data-host="109.74.196.48" data-port="8251" data-stats_path="" data-played_path="" data-channel="">
+						<img src="imagestemplate/radio-logo.png" alt="logo" class="qt-radiologo dripicons-media-play" width="80" height="80">
+						<i class="dripicons-media-play"></i> SD 32 kbps
+					</a>
+				</li>
+				<li class="qt-channel">
+					<a href="#!" class="qt-ellipsis" data-title="altradio" data-subtitle="The subtitle of radio 2" data-background="imagestemplate/large-1170-512.jpg" data-logo="imagestemplate/radio-logo.png" data-playtrack="http://109.74.196.48:8251/ragasiam" data-host="109.74.196.48" data-port="8251" data-stats_path="" data-played_path="" data-channel="">
+						<img src="imagestemplate/radio-logo.png" alt="logo" class="qt-radiologo" width="80" height="80">
+						<i class="dripicons-media-play"></i> HD 128 kbps
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- CHANNELS LIST END ========================= -->
+
+        </div>        
+        <!-- QT BODY END ================================ -->
+
+        <!-- QT FOOTER SCRIPTS ================================ -->
+        <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/jquery.js"></script><!--  JQUERY VERSION MUST MATCH WORDPRESS ACTUAL VERSION (NOW 1.12) -->
+        <script src="js/jquery-migrate.min.js"></script><!--  JQUERY VERSION MUST MATCH WORDPRESS ACTUAL VERSION (NOW 1.12) -->
+       
+        <!-- Framework -->
+        <script src="js/materializecss/bin/materialize.min.js"></script>
+
+        <!-- Cookies for player -->
+        <script src="js/jquerycookie.js"></script>
+
+         <!-- Slick carousel and skrollr -->
+        <script src="components/slick/slick.min.js"></script>
+        <script src="components/skrollr/skrollr.min.js"></script>
+        
+        <!-- Swipebox -->
+        <script src="components/swipebox/lib/ios-orientationchange-fix.js"></script>
+        <script src="components/swipebox/src/js/jquery.swipebox.min.js"></script>
+
+        <!-- Countdown -->
+        <script src="components/countdown/js/jquery.knob.js"></script>
+        <script src="components/countdown/js/jquery.throttle.js"></script>
+        <script src="components/countdown/js/jquery.classycountdown.min.js"></script>
+
+        <!-- Soundmanager2 -->
+        <!--[if IE]><script src="components/soundmanager/script/excanvas.js"></script><![endif]-->
+        <script src="components/soundmanager/script/berniecode-animator.js"></script>
+        <script src="components/soundmanager/script/soundmanager2-nodebug.js"></script>
+        <script src="components/soundmanager/script/shoutcast.js"></script>
+        <script src="components/soundmanager/templates/qtradio-player/script/qt-360player-volumecontroller.js"></script>
+        <script language="javascript" type="text/javascript" src="https://control.internet-radio.com:2199/system/streaminfo.js"></script>
+
+        <!-- Popup -->
+        <script src="components/popup/popup.js"></script>
+
+
+        <!-- MAIN JAVASCRIPT FILE ================================ -->
+        <script src="js/qt-main.js"></script>
+
+    </body>
+</html>
